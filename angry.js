@@ -37,41 +37,41 @@ function draw() {
   push();
   rectMode(CENTER);
   noFill();
-  strokeWeight(500);
-  rect(width / 2 + 100, height / 2 - 100, width - 10, height - 10);
+  strokeWeight(250);
+  rect(width / 2 + 50, height / 2 - 50, width - 5, height - 5);
   pop();
 
   push();
   let msg0 = "ARE YOU";
   fill("white");
-  textSize(150);
+  textSize(75);
   textFont("Orbitron");
   textAlign(LEFT);
-  text(msg0, -10, 300);
+  text(msg0, -10, 150);
   pop();
 
   push();
   let msg01 = "TIRED";
   fill("white");
-  textSize(150);
+  textSize(75);
   textFont("Orbitron");
   textAlign(LEFT);
-  text(msg01, -10, 450);
+  text(msg01, -10, 250);
   pop();
 
   push();
   let msg02 = "YET?";
   fill("white");
-  textSize(150);
+  textSize(75);
   textFont("Orbitron");
   textAlign(LEFT);
-  text(msg02, -10, 600);
+  text(msg02, -10, 350);
   pop();
 
   push();
   let msg = "[Click to start]";
   fill("white");
-  textSize(30);
+  textSize(15);
   textFont("kanit");
   textAlign(LEFT);
   text(msg, width * 0.55, height * 0.85);
@@ -79,7 +79,7 @@ function draw() {
 
   let msg2 = "Scream your anger into the VOID";
   fill("white");
-  textSize(80);
+  textSize(40);
   textFont("kanit");
   textStyle(BOLD);
   textAlign(LEFT);
@@ -90,8 +90,8 @@ function draw() {
   rectMode(CENTER);
   noFill();
   stroke("white");
-  strokeWeight(3);
-  rect(width / 2 + 100, height / 2 - 100, width * 0.8, height * 0.7);
+  strokeWeight(1.5);
+  rect(width / 2 + 50, height / 2 - 50, width * 0.9, height * 0.7);
   pop();
 }
 

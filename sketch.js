@@ -14,25 +14,25 @@ function setup() {
 
   //Bottone
   luckyButton = createButton("I'm feeling lucky.");
-  luckyButton.position(width / 2 - 350 / 2, height * 0.65);
+  luckyButton.position(width / 2 - 175 / 2, height * 0.65);
   luckyButton.mouseClicked(beLucky);
 
   //Emoji 1
   happy = createImg("./assets/image/Happy.png");
-  happy.size(150, 150);
-  happy.position(windowWidth / 3 - 150 / 2, windowHeight / 2 - 150 / 3);
+  happy.size(75, 75);
+  happy.position(windowWidth / 2.5 - 75 / 2, windowHeight / 2 - 75 / 3);
   happy.mousePressed(beHappy);
 
   //Emoji 2
   sad = createImg("./assets/image/Sad.png");
-  sad.size(150, 150);
-  sad.position(windowWidth / 2 - 150 / 2, windowHeight / 2 - 150 / 3);
+  sad.size(75, 75);
+  sad.position(windowWidth / 2 - 75 / 2, windowHeight / 2 - 75 / 3);
   sad.mousePressed(beSad);
 
   //Emoji 3
   angry = createImg("./assets/image/Angry.png");
-  angry.size(150, 150);
-  angry.position(windowWidth * 0.67 - 150 / 2, windowHeight / 2 - 150 / 3);
+  angry.size(75, 75);
+  angry.position(windowWidth * 0.6 - 75 / 2, windowHeight / 2 - 75 / 3);
   angry.mousePressed(beAngry);
 
   //Generazione di Stelle
@@ -40,7 +40,7 @@ function setup() {
     const newStar = new Star(
       random(windowWidth),
       random(windowHeight),
-      random(0.5, 5),
+      random(0.5, 3),
       random(TWO_PI)
     );
     myStars.push(newStar);
@@ -55,7 +55,7 @@ function draw() {
   strokeWeight(100);
   fill("#855988");
   drawingContext.filter = "blur(300px)";
-  ellipse(width / 2, height / 2, 1000, 1000);
+  ellipse(width / 2, height / 2, 700, 500);
   pop();
 
   //STELLE
@@ -71,7 +71,7 @@ function draw() {
   textFont("Kanit");
   textStyle(BOLD);
   fill("White");
-  textSize(50);
+  textSize(25);
   textAlign(CENTER);
   text(myText, width / 2, height / 3);
   pop();
@@ -81,7 +81,7 @@ function draw() {
   let myText2 = "[Choose your POSTER based on your MOOD]";
   textFont("Kanit");
   fill("White");
-  textSize(30);
+  textSize(15);
   textAlign(CENTER);
   text(myText2, width / 2, height / 2.7);
   pop();
@@ -91,7 +91,7 @@ function draw() {
   let myText3 = "(Click to hear the music)";
   textFont("Kanit");
   fill("White");
-  textSize(20);
+  textSize(10);
   textStyle(ITALIC);
   textAlign(CENTER);
   text(myText3, width / 2, height / 2.5);

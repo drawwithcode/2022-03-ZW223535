@@ -21,29 +21,29 @@ function draw() {
     background("#fae1aa");
 
     push();
-    strokeWeight(3);
+    strokeWeight(1.5);
     fill("white");
     stroke("white");
-    if (frameCount < 5000) {
-      translate(frameCount / 10, 0);
+    if (frameCount < 7000) {
+      translate(frameCount / 50, 0);
       ellipseMode(CENTER);
-      ellipse(width / 3.3, height * 0.7, 15, 15);
+      ellipse(width / 2.573, height * 0.7, 7, 7);
     } else {
       ellipseMode(CENTER);
-      ellipse(width * 0.7, height * 0.7, 15, 15);
+      ellipse(width * 0.62, height * 0.7, 7, 7);
     }
     pop();
 
     push();
-    strokeWeight(3);
+    strokeWeight(1.5);
     stroke("white");
-    line(width / 3.3, height * 0.7, width * 0.7, height * 0.7);
+    line(width / 2.57, height * 0.7, width * 0.62, height * 0.7);
     pop();
 
     push();
     let msg = "Happy Mood 2";
     fill("white");
-    textSize(50);
+    textSize(25);
     textFont("Kanit");
     textStyle(BOLD);
     textAlign(CENTER);
@@ -52,7 +52,7 @@ function draw() {
     push();
     let msg4 = "Use LEFT arrow to go back";
     fill("white");
-    textSize(30);
+    textSize(15);
     textFont("Kanit");
     textStyle(ITALIC);
     textAlign(CENTER);
@@ -61,26 +61,35 @@ function draw() {
 
     push();
     imageMode(CENTER);
-    image(myImage3, width / 2, height / 2.5, 450, 450);
+    image(myImage3, width / 2, height / 2.5, 225, 225);
     pop();
 
     push();
     rectMode(CENTER);
     noFill();
     stroke("White");
-    strokeWeight(3);
-    rect(width * 0.51, height / 2.4, 450, 450);
+    strokeWeight(1, 5);
+    rect(width * 0.51, height / 2.4, 225, 225);
     pop();
 
+    //Icone musica
     push();
     imageMode(CENTER);
     image(
       myImage,
       width / 2,
       height * 0.77,
-      myImage.width / 15,
-      myImage.height / 15
+      myImage.width / 30,
+      myImage.height / 30
     );
+    pop();
+
+    push();
+    rectMode(CENTER);
+    noFill();
+    stroke("White");
+    strokeWeight(1.5);
+    rect(width * 0.51, height / 2.4, 225, 225);
     pop();
 
     //Data
@@ -88,16 +97,16 @@ function draw() {
     let d = day();
     let m = month();
     fill("white");
-    textSize(150);
+    textSize(75);
     textFont("KANIT");
-
     textAlign(CENTER);
     text(d, width / 2.8, height / 2.9);
-    text(m, width / 2.8, height * 0.54);
+    text(m, width / 2.8, height * 0.52);
     pop();
 
+    //Linea data
     push();
-    strokeWeight(3);
+    strokeWeight(1.5);
     stroke("white");
     line(width / 3, height / 2.5, width / 2.6, height / 2.5);
     pop();
@@ -111,29 +120,29 @@ function draw() {
     background("#FFB9D9");
 
     push();
-    strokeWeight(3);
+    strokeWeight(1.5);
     fill("white");
     stroke("white");
     if (frameCount < 7000) {
-      translate(frameCount / 15, 0);
+      translate(frameCount / 50, 0);
       ellipseMode(CENTER);
-      ellipse(width / 3.3, height * 0.7, 15, 15);
+      ellipse(width / 2.573, height * 0.7, 7, 7);
     } else {
       ellipseMode(CENTER);
-      ellipse(width * 0.7, height * 0.7, 15, 15);
+      ellipse(width * 0.62, height * 0.7, 7, 7);
     }
     pop();
 
     push();
-    strokeWeight(3);
+    strokeWeight(1.5);
     stroke("white");
-    line(width / 3.3, height * 0.7, width * 0.7, height * 0.7);
+    line(width / 2.57, height * 0.7, width * 0.62, height * 0.7);
     pop();
 
     push();
     let msg2 = "Click to hear the music";
     fill("white");
-    textSize(50);
+    textSize(25);
     textFont("Kanit");
     textStyle(BOLD);
     textAlign(CENTER);
@@ -143,26 +152,28 @@ function draw() {
     push();
     let msg3 = "Use the RIGHT arrow to change song";
     fill("white");
-    textSize(30);
+    textSize(15);
     textFont("Kanit");
     textStyle(ITALIC);
     textAlign(CENTER);
     text(msg3, width / 2, height / 5);
     pop();
 
+    //Immagine
     push();
     imageMode(CENTER);
-    image(myImage2, width / 2, height / 2.5, 450, 450);
+    image(myImage2, width / 2, height / 2.5, 225, 225);
     pop();
 
+    //Icone musica
     push();
     imageMode(CENTER);
     image(
       myImage,
       width / 2,
       height * 0.77,
-      myImage.width / 15,
-      myImage.height / 15
+      myImage.width / 30,
+      myImage.height / 30
     );
     pop();
 
@@ -170,8 +181,8 @@ function draw() {
     rectMode(CENTER);
     noFill();
     stroke("White");
-    strokeWeight(3);
-    rect(width * 0.51, height / 2.4, 450, 450);
+    strokeWeight(1.5);
+    rect(width * 0.51, height / 2.4, 225, 225);
     pop();
 
     //Data
@@ -179,16 +190,16 @@ function draw() {
     let d = day();
     let m = month();
     fill("white");
-    textSize(150);
+    textSize(75);
     textFont("KANIT");
-
     textAlign(CENTER);
     text(d, width / 2.8, height / 2.9);
-    text(m, width / 2.8, height * 0.54);
+    text(m, width / 2.8, height * 0.52);
     pop();
 
+    //Linea data
     push();
-    strokeWeight(3);
+    strokeWeight(1.5);
     stroke("white");
     line(width / 3, height / 2.5, width / 2.6, height / 2.5);
     pop();
