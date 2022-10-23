@@ -18,7 +18,7 @@ function draw() {
   push();
   if (mic) {
     let micLevel = mic.getLevel();
-    let size = map(micLevel, 0, 1, 1, 1000);
+    let size = map(micLevel, 0, 1, 1, 200);
     console.log(mic.getLevel());
 
     const inc = 200;
@@ -35,19 +35,63 @@ function draw() {
   pop();
 
   push();
-  let msg = "Click to start";
+  rectMode(CENTER);
+  noFill();
+  strokeWeight(500);
+  rect(width / 2 + 100, height / 2 - 100, width - 10, height - 10);
+  pop();
+
+  push();
+  let msg0 = "ARE YOU";
+  fill("white");
+  textSize(150);
+  textFont("Orbitron");
+  textAlign(LEFT);
+  text(msg0, -10, 300);
+  pop();
+
+  push();
+  let msg01 = "TIRED";
+  fill("white");
+  textSize(150);
+  textFont("Orbitron");
+  textAlign(LEFT);
+  text(msg01, -10, 450);
+  pop();
+
+  push();
+  let msg02 = "YET?";
+  fill("white");
+  textSize(150);
+  textFont("Orbitron");
+  textAlign(LEFT);
+  text(msg02, -10, 600);
+  pop();
+
+  push();
+  let msg = "[Click to start]";
   fill("white");
   textSize(30);
-  textFont("Kalam");
-  textAlign(CENTER);
-  text(msg, width / 2, height / 2.3);
+  textFont("kanit");
+  textAlign(LEFT);
+  text(msg, width * 0.55, height * 0.85);
+  pop();
 
-  let msg2 = "Scream your anger into the VOID!";
+  let msg2 = "Scream your anger into the VOID";
   fill("white");
-  textSize(50);
-  textFont("Kalam");
-  textAlign(CENTER);
-  text(msg2, width / 2, height / 2);
+  textSize(80);
+  textFont("kanit");
+  textStyle(BOLD);
+  textAlign(LEFT);
+  text(msg2, width * 0.55, height * 0.9);
+  pop();
+
+  push();
+  rectMode(CENTER);
+  noFill();
+  stroke("white");
+  strokeWeight(3);
+  rect(width / 2 + 100, height / 2 - 100, width * 0.8, height * 0.7);
   pop();
 }
 

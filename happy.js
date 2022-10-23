@@ -24,8 +24,19 @@ function draw() {
     strokeWeight(3);
     fill("white");
     stroke("white");
-    ellipseMode(CENTER);
-    ellipse(width / 3.3, height * 0.7, 15, 15);
+    if (frameCount < 5000) {
+      translate(frameCount / 10, 0);
+      ellipseMode(CENTER);
+      ellipse(width / 3.3, height * 0.7, 15, 15);
+    } else {
+      ellipseMode(CENTER);
+      ellipse(width * 0.7, height * 0.7, 15, 15);
+    }
+    pop();
+
+    push();
+    strokeWeight(3);
+    stroke("white");
     line(width / 3.3, height * 0.7, width * 0.7, height * 0.7);
     pop();
 
@@ -33,13 +44,17 @@ function draw() {
     let msg = "Happy Mood 2";
     fill("white");
     textSize(50);
-    textFont("Kalam");
+    textFont("Kanit");
+    textStyle(BOLD);
     textAlign(CENTER);
     text(msg, width / 2, height / 6);
+    pop();
+    push();
     let msg4 = "Use LEFT arrow to go back";
     fill("white");
-    textSize(35);
-    textFont("Kalam");
+    textSize(30);
+    textFont("Kanit");
+    textStyle(ITALIC);
     textAlign(CENTER);
     text(msg4, width / 2, height / 5);
     pop();
@@ -47,6 +62,14 @@ function draw() {
     push();
     imageMode(CENTER);
     image(myImage3, width / 2, height / 2.5, 450, 450);
+    pop();
+
+    push();
+    rectMode(CENTER);
+    noFill();
+    stroke("White");
+    strokeWeight(3);
+    rect(width * 0.51, height / 2.4, 450, 450);
     pop();
 
     push();
@@ -58,6 +81,25 @@ function draw() {
       myImage.width / 15,
       myImage.height / 15
     );
+    pop();
+
+    //Data
+    push();
+    let d = day();
+    let m = month();
+    fill("white");
+    textSize(150);
+    textFont("KANIT");
+
+    textAlign(CENTER);
+    text(d, width / 2.8, height / 2.9);
+    text(m, width / 2.8, height * 0.54);
+    pop();
+
+    push();
+    strokeWeight(3);
+    stroke("white");
+    line(width / 3, height / 2.5, width / 2.6, height / 2.5);
     pop();
 
     if (mySong3.isPlaying() === false) {
@@ -92,14 +134,18 @@ function draw() {
     let msg2 = "Click to hear the music";
     fill("white");
     textSize(50);
-    textFont("Kalam");
+    textFont("Kanit");
+    textStyle(BOLD);
     textAlign(CENTER);
     text(msg2, width / 2, height / 6);
+    pop();
 
+    push();
     let msg3 = "Use the RIGHT arrow to change song";
     fill("white");
-    textSize(35);
-    textFont("Kalam");
+    textSize(30);
+    textFont("Kanit");
+    textStyle(ITALIC);
     textAlign(CENTER);
     text(msg3, width / 2, height / 5);
     pop();
@@ -118,6 +164,33 @@ function draw() {
       myImage.width / 15,
       myImage.height / 15
     );
+    pop();
+
+    push();
+    rectMode(CENTER);
+    noFill();
+    stroke("White");
+    strokeWeight(3);
+    rect(width * 0.51, height / 2.4, 450, 450);
+    pop();
+
+    //Data
+    push();
+    let d = day();
+    let m = month();
+    fill("white");
+    textSize(150);
+    textFont("KANIT");
+
+    textAlign(CENTER);
+    text(d, width / 2.8, height / 2.9);
+    text(m, width / 2.8, height * 0.54);
+    pop();
+
+    push();
+    strokeWeight(3);
+    stroke("white");
+    line(width / 3, height / 2.5, width / 2.6, height / 2.5);
     pop();
 
     if (mySong2.isPlaying() === false) {

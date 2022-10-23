@@ -14,7 +14,7 @@ function setup() {
 
   //Bottone
   luckyButton = createButton("I'm feeling lucky.");
-  luckyButton.position(width / 2 - 350 / 2, height * 0.7);
+  luckyButton.position(width / 2 - 350 / 2, height * 0.65);
   luckyButton.mouseClicked(beLucky);
 
   //Emoji 1
@@ -68,7 +68,8 @@ function draw() {
   //SCRITTA
   push();
   let myText = "How are you feeling today?";
-  textFont("Kalam");
+  textFont("Kanit");
+  textStyle(BOLD);
   fill("White");
   textSize(50);
   textAlign(CENTER);
@@ -77,19 +78,30 @@ function draw() {
 
   //SCRITTA 2
   push();
-  let myText2 = "(Click to hear the music)";
-  textFont("Kalam");
+  let myText2 = "[Choose your POSTER based on your MOOD]";
+  textFont("Kanit");
   fill("White");
-  textSize(20);
+  textSize(30);
   textAlign(CENTER);
   text(myText2, width / 2, height / 2.7);
+  pop();
+
+  //SCRITTA 3
+  push();
+  let myText3 = "(Click to hear the music)";
+  textFont("Kanit");
+  fill("White");
+  textSize(20);
+  textStyle(ITALIC);
+  textAlign(CENTER);
+  text(myText3, width / 2, height / 2.5);
   pop();
 
   //MUSICA
   if (mySound.isPlaying() === false) {
     mySound.play();
   }
-  const myAmp = 0.5;
+  const myAmp = 0.3;
   mySound.amp(myAmp);
 }
 
